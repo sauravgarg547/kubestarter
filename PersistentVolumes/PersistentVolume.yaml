@@ -2,12 +2,13 @@ apiVersion: v1
 kind: PersistentVolume
 metadata:
   name: nginx-pv
+  namespace: nginx
   labels:
-    env: dev
+    app: nginx
 spec:
   storageClassName: standard
   capacity:
-    storage: 1Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
